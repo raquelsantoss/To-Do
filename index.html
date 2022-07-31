@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="./favicon/favicon-32x32.png" type="image/x-icon">
+    <title>Todo list</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="todas-tarefas">
+      <h2 class="tarefa-lista-titulo">Minhas listas</h2>
+      <ul class="tarefa-lista" dados-lista></ul>
+
+      <form action="" dados-nova-lista-form>
+        <input 
+          type="text"
+          class="nova lista"
+          dados-nova-lista-input
+          placeholder="lista..."
+          aria-label="nome da nova lista"
+        />
+        <button class="botao criar" aria-label="criar nova lista">+</button>
+      </form>
+    </div>
+
+    <div class="todo-lista" lista-display-container>
+      <div class="todo-header">
+        <h2 class="lista-titulo" lista-titulo>Teste</h2>
+        <p class="tarefa-count" lista-contador>Tarefas incompletas</p>
+      </div>
+
+      <div class="todo-body">
+        <div class="tarefa" lista-tarefas></div>
+        <div class="nova-tarefa">
+            <form action="" dados-nova-tarefa-form>
+                <input 
+                  type="text"
+                  dados-nova-tarefa-input
+                  class="nova tarefa"
+                  placeholder="item..."
+                  aria-label="nome do novo item"
+                />
+                <button class="botao criar" aria-label="criar nova tarefa">+</button>
+              </form>
+        </div>
+
+        <div class="deletar-lista">
+          <button class="botao deletar" limpar-tarefas-completadas>Deletar Tarefas Completadas</button>
+          <button class="botao deletar" botao-deletar-dados-lista>Deletar Lista</button>
+        </div>
+      </div>
+    </div>
+
+   
+    </div>
+    <template id="tarefa-template">
+      <div class="tarefa">
+        <input type="checkbox" />
+        <label>
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+    </template>
+    <script defer src="script.js"></script>
+  </body>
+</html>
